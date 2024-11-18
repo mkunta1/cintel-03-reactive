@@ -1,3 +1,4 @@
+
 import plotly.express as px
 import seaborn as sns
 from palmerpenguins import load_penguins
@@ -13,7 +14,7 @@ penguins_df = load_penguins()
 ui.page_opts(title="Penguin Data", fillable=True)
 
 
-with ui.sidebar(open="open"):
+with ui.sidebar(open="open", bg="#DAF7A6",width=220, position='right'):
         ui.h2("Sidebar")
         ui.input_selectize("selected_attribute", "Select Attributes",  ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"],
             )
@@ -96,6 +97,3 @@ with ui.layout_columns():
                 )
 
             
-
-
-
